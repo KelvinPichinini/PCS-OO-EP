@@ -2,63 +2,56 @@
 #include <iostream>
 using namespace std;
 
-void Serie::setNome(string nome){
+Serie::Serie(string nome){
     this->nome=nome;
 }
 
-bool Serie::estaVazia(){
-    if(this->tamanho==0){
-        return true;
-    }
-    else
-        return false;
-
-
+Serie::~Serie(){
+    
 }
 
 string Serie::getNome(){
     return this->nome;
 }
 
-double Serie::getValor(int posicao){
-    if(posicao>=0 && posicao<NUMERO_MAXIMO_VALORES){
-        return this->valores[posicao];
-    }
-    return 0;
-}
-
-double Serie::getMaximo(){//TODO : verificar caso em que o vtor esta vazio
-    double maior = this->valores[0];
-    for(int i=1;i<this->tamanho;i++){
-        if(this->valores[i]>maior){
-            maior=this->valores[i];
-        }
-    }
-    return maior;
-
-}
-
-double Serie::getMinimo(){//TODO : verificar caso em que o vtor esta vazio
-    double menor = this->valores[0];
-    for(int i=1;i<this->tamanho;i++){
-        if(this->valores[i]<menor){
-            menor=this->valores[i];
-        }
-    }
-    return menor;
-
+bool Serie::estaVazia(){//REVER
+    if (this->tamanho==0){
+        return true;
+    } else return false;
 }
 
 int Serie::getTamanho(){
-
     return this->tamanho;
 }
 
-void Serie::adicionar(double valor){
-    this->getTamanho();
-    if(tamanho<NUMERO_MAXIMO_VALORES){
-       this->valores[tamanho]=valor;
-       this->tamanho++;
-    }
+double Serie::getValor(int posicao){
+    if (posicao<this->tamanho && posicao>=0){
+        return this->valores[posicao];
+    } else return 0;
+}
 
+double Serie::getMaximo(){
+    if (this->tamanho>0){
+        
+        double maximo = valores[0];
+        for (int i=1; i<this->tamanho; i++){
+            if (valores[i]>maximo){
+                maximo=valores[i];
+            }
+        }
+        return maximo;
+    } else return 0;
+}
+
+double Serie::getMinimo(){
+    if (this->tamanho>0){
+        
+        double minimo = valores [0];
+        for (int i=1; i<this->tamanho; i++){
+            if (valores[i]>minimo){
+                minimo=valores[i];
+            }
+        }
+        return minimo;
+    } else return 0;
 }
