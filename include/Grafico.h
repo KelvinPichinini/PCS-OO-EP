@@ -19,42 +19,32 @@ using namespace std;
  */
 class Grafico {
 public:
-  void setSerieNasAbscissas(Serie* x);
-  void setSerieNasOrdenadas(Serie* y);
-
-  void setEixoDasAbscissas(string titulo, string unidade, double minimo, double maximo);
-  void setEixoDasOrdenadas(string titulo, string unidade, double minimo, double maximo);
-
-  /**
-   * Desenha o grafico, colocando na tela os eixos e os pontos.
-   */
-  void desenhar();
-
-  /**
-   * Apaga a tela.
-   */
-  void reset();
-
-  /**
-   * Define a tela a ser usada
-   */
-  void setTela(Tela* t);
-
-  Serie* getSerieNasAbscissas();
-  Serie* getSerieNasOrdenadas();
-  Eixo* getEixoDasAbscissas();
-  Eixo* getEixoDasOrdenadas();
+    Grafico(Tela* tela, Serie* x, Serie *y, Eixo* abscissas, Eixo* ordenadas);
+    virtual ~Grafico();
+    /**
+     * Desenha o grafico, colocando na tela os eixos e os pontos.
+     */
+    virtual void desenhar();
+    /**
+     * Apaga a tela.
+     */
+    virtual void reset();
+    virtual Serie* getSerieNasAbscissas();
+    virtual Serie* getSerieNasOrdenadas();
+    virtual Eixo* getEixoDasAbscissas();
+    virtual Eixo* getEixoDasOrdenadas();
+    
 
 
 private:
-  Serie *serieNasAbscissas=new Serie;
-  Serie *serieNasOrdenadas=new Serie;
-  Eixo *eixoDasAbscissas=new Eixo;
-  Eixo *eixoDasOrdenadas=new Eixo;
 
-  Tela *telaT=new Tela;
-
-
+    Serie *serieNasAbscissas=new SerieDeCanal();//Rever ESTA ERRADO
+    Serie *serieNasOrdenadas=new SerieDeCanal();//Rever ESTA ERRADO
+    Eixo *eixoDasAbscissas=new Eixo(serieNasAbscissas->getNome());
+    Eixo *eixoDasOrdenadas=new Eixo(serieNasOrdenadas->getNome());
+    
+    Tela *telaT=new Tela;
+    
 };
 
 #endif // GRAFICO_H
