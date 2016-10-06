@@ -1,0 +1,93 @@
+# depslib dependency file v1.0
+1471946309 source:/home/k/grive/EP1/main.cpp
+	<iostream>
+	"Serie.h"
+	"Eixo.h"
+
+1471945761 /home/k/grive/EP1/include/Serie.h
+	<iostream>
+
+1471945677 source:/home/k/grive/EP1/src/Serie.cpp
+	"Serie.h"
+
+1471946072 /home/k/grive/EP1/include/Eixo.h
+	<iostream>
+
+1471946020 source:/home/k/grive/EP1/src/Eixo.cpp
+	"Eixo.h"
+	<iostream>
+
+1471946255 source:/home/k/grive/EP1/src/Grafico.cpp
+	"Grafico.h"
+
+1471946283 /home/k/grive/EP1/include/Grafico.h
+
+1473514512 source:c:\users\kelvi_000\google drive\ep1\main.cpp
+	<iostream>
+	"Serie.h"
+	"Eixo.h"
+	"Grafico.h"
+	"Tela.h"
+	"InterfaceSerial.h"
+	"IHC.h"
+
+1472092312 c:\users\kelvi_000\google drive\ep1\include\serie.h
+	<iostream>
+
+1472075123 c:\users\kelvi_000\google drive\ep1\include\eixo.h
+	<iostream>
+
+1473195488 source:c:\users\kelvi_000\google drive\ep1\src\eixo.cpp
+	"Eixo.h"
+	"Grafico.h"
+	<iostream>
+
+1473266827 source:c:\users\kelvi_000\google drive\ep1\src\grafico.cpp
+	"Grafico.h"
+	"Serie.h"
+	"Eixo.h"
+	"Tela.h"
+	<iostream>
+
+1473196245 c:\users\kelvi_000\google drive\ep1\include\grafico.h
+	<string>
+	"Serie.h"
+	"Eixo.h"
+	"Tela.h"
+
+1473266544 source:c:\users\kelvi_000\google drive\ep1\src\serie.cpp
+	"Serie.h"
+	<iostream>
+
+1464905395 source:c:\users\kelvi_000\google drive\ep1\src\ihc.cpp
+	"IHC.h"
+	<windows.h>
+	<unistd.h>
+
+1465477548 c:\users\kelvi_000\google drive\ep1\include\ihc.h
+
+1467672892 source:c:\users\kelvi_000\google drive\ep1\src\interfaceserial.cpp
+	"InterfaceSerial.h"
+	<stdio.h>
+	<vector>
+	<iostream>
+	<cctype>
+
+1465245637 c:\users\kelvi_000\google drive\ep1\include\interfaceserial.h
+	"Serie.h"
+	<string>
+	<windows.h>
+
+1465835658 source:c:\users\kelvi_000\google drive\ep1\src\tela.cpp
+	"Tela.h"
+	<iostream>
+	<cmath>
+	<stdexcept>
+	<sstream>
+	<string>
+	<windows.h>
+	<unistd.h>
+
+1465477520 c:\users\kelvi_000\google drive\ep1\include\tela.h
+	"Eixo.h"
+
