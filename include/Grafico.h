@@ -22,6 +22,7 @@ using namespace std;
  */
 class Grafico {
 public:
+<<<<<<< HEAD
 
   Grafico(Tela* tela, Serie* x, Serie* y, Eixo* abscissas, Eixo* ordenadas);
 
@@ -58,7 +59,34 @@ private:
 
   Tela* telaT=new Tela;
 
+=======
+    Grafico(Tela* tela, Serie* x, Serie *y, Eixo* abscissas, Eixo* ordenadas);
+    virtual ~Grafico();
+    /**
+     * Desenha o grafico, colocando na tela os eixos e os pontos.
+     */
+    virtual void desenhar();
+    /**
+     * Apaga a tela.
+     */
+    virtual void reset();
+    virtual Serie* getSerieNasAbscissas();
+    virtual Serie* getSerieNasOrdenadas();
+    virtual Eixo* getEixoDasAbscissas();
+    virtual Eixo* getEixoDasOrdenadas();
+    
 
+
+private:
+>>>>>>> origin/master
+
+    Serie *serieNasAbscissas=new SerieDeCanal();//Rever ESTA ERRADO
+    Serie *serieNasOrdenadas=new SerieDeCanal();//Rever ESTA ERRADO
+    Eixo *eixoDasAbscissas=new Eixo(serieNasAbscissas->getNome());
+    Eixo *eixoDasOrdenadas=new Eixo(serieNasOrdenadas->getNome());
+    
+    Tela *telaT=new Tela;
+    
 };
 
 #endif // GRAFICO_H
