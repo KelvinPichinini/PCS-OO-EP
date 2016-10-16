@@ -9,19 +9,22 @@ using namespace std;
 
 
 class Serie{
-private:
+
+protected:
     string nome;
-    double valores[NUMERO_MAXIMO_VALORES]={};
-    int tamanho=0;
+    int tamanho;
+
 public:
-    void setNome(string nome);
+    Serie(string nome);
+    virtual ~Serie();
+    //void setNome(string nome); (RETIRADO EM V2.0)
     string getNome();
-    bool estaVazia();
-    int getTamanho();
-    double getValor(int posicao);
-    double getMaximo();
-    double getMinimo();
-    void adicionar(double valor);
+    virtual bool estaVazia() = 0;
+    virtual int getTamanho() = 0;
+    virtual double getValor(int posicao) = 0;
+    virtual double getMaximo() = 0;
+    virtual double getMinimo() = 0;
+    //void adicionar(double valor); (RETIRADO EM V2.0
 
 };
 

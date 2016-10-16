@@ -12,36 +12,22 @@
 #define DIVISAO_ABSCISSA 10
 #define DIVISAO_ORDENADA 5
 
-void Grafico::setSerieNasAbscissas(Serie *x){
+
+Grafico::Grafico(Tela* tela, Serie* x, Serie* y, Eixo* abscissas, Eixo* ordenadas){
+
     this->serieNasAbscissas = x;
 
-}
-
-void Grafico::setSerieNasOrdenadas(Serie* y){
     this->serieNasOrdenadas = y;
 
+    this->eixoDasAbscissas = abscissas;
+
+    this->eixoDasOrdenadas = ordenadas;
+
 }
-
-void Grafico::setEixoDasAbscissas(string titulo, string unidade, double minimo, double maximo){
-    this->eixoDasAbscissas->setTitulo(titulo);
-    this->eixoDasAbscissas->setUnidade(unidade);
-    this->eixoDasAbscissas->setEscalaMaxima(maximo);
-    this->eixoDasAbscissas->setEscalaMinima(minimo);
-    this->eixoDasAbscissas->setNumeroDeDivisoes((LARGURA_UTIL-1)/DIVISAO_ABSCISSA); //TODO Verificar
-
+Grafico::~Grafico(){
 
 
 }
-void Grafico::setEixoDasOrdenadas(string titulo, string unidade, double minimo, double maximo){
-    this->eixoDasOrdenadas->setTitulo(titulo);
-    this->eixoDasOrdenadas->setUnidade(unidade);
-    this->eixoDasOrdenadas->setEscalaMaxima(maximo);
-    this->eixoDasOrdenadas->setEscalaMinima(minimo);
-    this->eixoDasOrdenadas->setNumeroDeDivisoes((ALTURA_UTIL-1)/DIVISAO_ORDENADA); //TODO Verificar
-
-
-}
-
   /**
    * Desenha o grafico, colocando na tela os eixos e os pontos.
    */

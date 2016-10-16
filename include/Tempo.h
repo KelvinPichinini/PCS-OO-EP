@@ -1,35 +1,36 @@
-//
-//  Tempo.hpp
-//  _2
-//
-//  Created by Arthur Wachslicht on 06/10/16.
-//  Copyright Â© 2016 Arthur Wachslicht. All rights reserved.
-//
+#ifndef TEMPO_H
+#define TEMPO_H
 
-#ifndef Tempo_h
-#define Tempo_h
 
-#include <stdio.h>
 #include "Serie.h"
+#include <iostream>
+
+using namespace std;
 
 class Tempo : public Serie {
 public:
     /**
      * O nome da serie deve ser sempre "Tempo". O tamanhoDaFaixa
      * define o tamanho da faixa de tempo. Se o tamanhoDaFaixa for
-     * 3, por exemplo, o tamanho mÃ¡ximo da Serie sera 3 e,
-     * portanto, sÃ³ os 3 Ãºltimos valores serÃ£o guardados.
+     * 3, por exemplo, o tamanho máximo da Serie sera 3 e,
+     * portanto, só os 3 últimos valores serão guardados.
      */
     Tempo(int tamanhoDaFaixa);
     virtual ~Tempo();
     /**
-     * Coloca o prÃ³ximo valor de tempo nesta Serie.
+     * Coloca o próximo valor de tempo nesta Serie.
      */
     virtual void incrementar();
-    
+    virtual bool estaVazia() ;
+    virtual int getTamanho() ;
+    virtual double getValor(int posicao);
+    virtual double getMaximo() ;
+    virtual double getMinimo() ;
+
 private:
     int tamanhoDaFaixa;
-    
+    double* valores;
+
 };
 
-#endif /* Tempo_h */
+#endif // TEMPO_H

@@ -4,21 +4,16 @@
 
 using namespace std;
 
-void Eixo::setTitulo(string titulo){
-    this->titulo=titulo;
+Eixo::Eixo(string titulo, string unidade, int numeroDeDivisoes,
+          double escalaMinima, double escalaMaxima){
+
+    this->titulo = titulo;
+    this->unidade = unidade;
+    this->escalaMaxima = escalaMaxima;
+    this->escalaMinima = escalaMinima;
+    this->numeroDeDivisoes = numeroDeDivisoes;
 }
 
-void Eixo::setUnidade(string unidade){
-    this->unidade=unidade;
-}
-
-void Eixo::setEscalaMaxima(double escalaMaxima){
-    this->escalaMaxima=escalaMaxima;
-}
-
-void Eixo::setEscalaMinima(double escalaMinima){
-    this->escalaMinima=escalaMinima;
-}
 
 string Eixo::getTitulo(){
     return this->titulo;
@@ -51,7 +46,5 @@ double Eixo::getEscalaMinima(){
     return this->escalaMinima;
 }
 
-void Eixo::setNumeroDeDivisoes(int numero){
-    this->numeroDeDivisoes= numero;
-}
+
 

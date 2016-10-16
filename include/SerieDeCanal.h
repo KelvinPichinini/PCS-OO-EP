@@ -1,13 +1,6 @@
-//
-//  SerieDeCanal.hpp
-//  _2
-//
-//  Created by Arthur Wachslicht on 28/09/16.
-//  Copyright Â© 2016 Arthur Wachslicht. All rights reserved.
-//
+#ifndef SERIEDECANAL_H
+#define SERIEDECANAL_H
 
-#ifndef SerieDeCanal_h
-#define SerieDeCanal_h
 
 #include <iostream>
 using namespace std;
@@ -16,9 +9,9 @@ using namespace std;
 class SerieDeCanal: public Serie {
 public:
     /**
-     * Cria uma SerieDeCanal com um nome e uma quantidade mÃ¡xima de valores.
-     * Se a quantidade mÃ¡xima for 3, por exemplo, a Serie poderÃ¡ ter os
-     * valores 5, 7 e 8. Ao adicionar o valor 2, a sÃ©rie deve ficar com os
+     * Cria uma SerieDeCanal com um nome e uma quantidade máxima de valores.
+     * Se a quantidade máxima for 3, por exemplo, a Serie poderá ter os
+     * valores 5, 7 e 8. Ao adicionar o valor 2, a série deve ficar com os
      * valores 7, 8 e 2.
      */
     SerieDeCanal (string nome, int quantidadeMaxima);
@@ -26,7 +19,7 @@ public:
     /**
      * Adiciona o valor a serie.
      *
-     * Apenas os Ãºltimos 'quantidadeMaxima' valores sao armazenados. Deve
+     * Apenas os últimos 'quantidadeMaxima' valores sao armazenados. Deve
      * ser implementado como uma fila circular.
      *
      * Por exemplo, se a serie tem quantidadeMaxima = 5 e possui os
@@ -34,8 +27,16 @@ public:
      * 2, 3, 5, 7, 11.
      */
     virtual void adicionar (double valor);
-private:
-    int quantidadeMaxima;
-};
+    virtual bool estaVazia() ;
+    virtual int getTamanho() ;
+    virtual double getValor(int posicao);
+    virtual double getMaximo() ;
+    virtual double getMinimo() ;
 
-#endif /* SerieDeCanal_h */
+private:
+
+    int quantidadeMaxima ;
+    double* valores;
+
+};
+#endif // SERIEDECANAL_H

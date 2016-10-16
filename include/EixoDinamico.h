@@ -1,19 +1,18 @@
-//
-//  EixoDinamico.hpp
-//  _2
-//
-//  Created by Arthur Wachslicht on 06/10/16.
-//  Copyright © 2016 Arthur Wachslicht. All rights reserved.
-//
-
-#ifndef EixoDinamico_h
-#define EixoDinamico_h
+#ifndef EIXODINAMICO_H
+#define EIXODINAMICO_H
 
 
 #include "Eixo.h"
 #include "Serie.h"
-
 #include <iostream>
+
+#define LARGURA_UTIL 61
+#define ALTURA_UTIL 16
+
+#define DIVISAO_ABSCISSA 10
+#define DIVISAO_ORDENADA 5
+
+using namespace std;
 
 class EixoDinamico : public Eixo {
 public:
@@ -23,9 +22,13 @@ public:
     EixoDinamico(Serie* serie, string unidade, int numeroDeDivisoes,
                  double escalaMinimaInicial, double escalaMaximaInicial);
     virtual ~EixoDinamico();
-    
-    
-    
+    virtual double getEscalaMinima();
+    virtual double getEscalaMaxima();
+
+    protected:
+        Serie* serieNoEixo;
+
+    private:
 };
 
-#endif /* EixoDinamico_h */
+#endif // EIXODINAMICO_H

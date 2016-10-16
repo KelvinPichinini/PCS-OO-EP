@@ -91,3 +91,96 @@
 1465477520 c:\users\kelvi_000\google drive\ep1\include\tela.h
 	"Eixo.h"
 
+1476139080 source:c:\users\kelvi_000\google drive\ep\src\eixo.cpp
+	"Eixo.h"
+	"Grafico.h"
+	<iostream>
+
+1476632332 c:\users\kelvi_000\google drive\ep\include\eixo.h
+	<iostream>
+
+1476632332 c:\users\kelvi_000\google drive\ep\include\grafico.h
+	<string>
+	"Serie.h"
+	"Eixo.h"
+	"Tela.h"
+	"SerieDeCanal.h"
+
+1476544086 c:\users\kelvi_000\google drive\ep\include\serie.h
+	<iostream>
+
+1465481120 c:\users\kelvi_000\google drive\ep\include\tela.h
+	"Eixo.h"
+
+1476149306 source:c:\users\kelvi_000\google drive\ep\src\grafico.cpp
+	"Grafico.h"
+	"Serie.h"
+	"Eixo.h"
+	"Tela.h"
+	<iostream>
+
+1463165633 source:c:\users\kelvi_000\google drive\ep\src\ihc.cpp
+	"IHC.h"
+	<windows.h>
+
+1463163871 c:\users\kelvi_000\google drive\ep\include\ihc.h
+
+1467674665 source:c:\users\kelvi_000\google drive\ep\src\interfaceserial.cpp
+	"InterfaceSerial.h"
+	<stdio.h>
+	<vector>
+	<iostream>
+	<cctype>
+
+1463165091 c:\users\kelvi_000\google drive\ep\include\interfaceserial.h
+	"SerieDeCanal.h"
+	<string>
+	<windows.h>
+
+1473202341 source:c:\users\kelvi_000\google drive\ep\src\tela.cpp
+	"Tela.h"
+	<iostream>
+	<cmath>
+	<stdexcept>
+	<sstream>
+	<string>
+	<windows.h>
+	<unistd.h>
+
+1476568351 c:\users\kelvi_000\google drive\ep\include\seriedecanal.h
+	<iostream>
+	"Serie.h"
+
+1476636591 source:c:\users\kelvi_000\google drive\ep\main.cpp
+	<iostream>
+	"Serie.h"
+	"Eixo.h"
+	"Grafico.h"
+	"Tela.h"
+	"InterfaceSerial.h"
+	"IHC.h"
+	"Tempo.h"
+	"EixoDinamico.h"
+
+1476574128 source:c:\users\kelvi_000\google drive\ep\src\eixodinamico.cpp
+	"EixoDinamico.h"
+
+1476632332 c:\users\kelvi_000\google drive\ep\include\eixodinamico.h
+	"Eixo.h"
+	"Serie.h"
+	<iostream>
+
+1476544086 source:c:\users\kelvi_000\google drive\ep\src\serie.cpp
+	"Serie.h"
+	<iostream>
+
+1476585753 source:c:\users\kelvi_000\google drive\ep\src\seriedecanal.cpp
+	"SerieDeCanal.h"
+
+1476585123 source:c:\users\kelvi_000\google drive\ep\src\tempo.cpp
+	"Tempo.h"
+
+1476584995 c:\users\kelvi_000\google drive\ep\include\tempo.h
+	"Serie.h"
+	<iostream>
+

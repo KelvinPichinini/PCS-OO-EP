@@ -35,18 +35,24 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="include/Eixo.h" />
+		<Unit filename="include/EixoDinamico.h" />
 		<Unit filename="include/Grafico.h" />
 		<Unit filename="include/IHC.h" />
 		<Unit filename="include/InterfaceSerial.h" />
 		<Unit filename="include/Serie.h" />
+		<Unit filename="include/SerieDeCanal.h" />
 		<Unit filename="include/Tela.h" />
+		<Unit filename="include/Tempo.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Eixo.cpp" />
+		<Unit filename="src/EixoDinamico.cpp" />
 		<Unit filename="src/Grafico.cpp" />
 		<Unit filename="src/IHC.cpp" />
 		<Unit filename="src/InterfaceSerial.cpp" />
 		<Unit filename="src/Serie.cpp" />
+		<Unit filename="src/SerieDeCanal.cpp" />
 		<Unit filename="src/Tela.cpp" />
+		<Unit filename="src/Tempo.cpp" />
 		<Extensions>
 			<code_completion />
 			<debugger />
